@@ -17,6 +17,13 @@ public class DeveloperProjectFinder {
             }
 
             Collections.sort(result, Collections.reverseOrder());
+            
+            Collections.sort(result, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    return o2.length() - o1.length();
+                }
+            });
 
         }
 
